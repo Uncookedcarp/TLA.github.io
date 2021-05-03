@@ -2,87 +2,152 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Menu</title>
+<title>Practice</title>
 <style>
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: white;
+}
+
 h1 {
-    margin-bottom: 20px;
+    margin: 100px;
     text-align: center;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 175%;
 }
 
-
-div#container {
-    background-color: grey;
-
-}
-
-
-p {
-    border: 3px solid black;
-    background-color: grey;
-    width:90%;
-    height: 150px;
-    margin-right: auto;
-    margin-left: auto;
-    font-family: calibri;
-    color: black;
-    font-style: oblique;
-    text-align: right;
-
-}
-
-
-.row {
+section {
+    position: relative;
+    padding: 15px;
     width: 100%;
 }
 
+p {
+    position: relative;
+    clear: right;
+}
+
+div {
+    position: relative;
+    background-color: gray;
+    border: 1px solid black;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.sub1 {
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: pink;
+
+}
+
+.sub2 {
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: lightgreen;
+}
+
+.sub3 {
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: lightskyblue;
+}
+
+.content {
+    padding: 5px;
+    border: none;
+    background-color: gray;
+    font-family: calibri;
+    color: black;
+    margin: 0px;
+    height: 200px;
+    overflow: auto;
+}
+
+.row {
+    width: 90%;
+}
+
 @media (min-width: 992px) {
-    .col-md-1, .col-md-2, .col-md-3 {
+    .column-lg-4 {
         float: left;
-    }
-    .col-md-1 {
-        width: 25%;
-    }
-    .col-md-2 {
-        width: 25%;
-    }
-    .col-md-3 {
-        width: 25%;
+        width: 33.33%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .col-sm-1, .col-sm-2, .col-sm-3 {
+    .column-md-6 {
         float: left;
-    }
-    .col-sm-1 {
         width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
     }
-    .col-sm-2 {
-        width: 50%;
-    }
-    .col-sm-3 {
+
+    .column-md-12 {
+        float: left;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
+@media (max-width: 767px) {
+    .column-sm-12 {
+        float: left;
+        width: 100%;
+    }
+}
 </style>
 </head>
-
 <body>
-   
-    <h1>Menu</h1>
-    <div class="container-fluid">
-        <div class="row">
-        <div class="col-md-1 col-sm-1"><p>Carrots<br>Carrots are orange and yummy</p></div>
-        <div class="col-md-2 col-sm-2"><p>Cabbage <br>Cabbage is stinky but yummy</p></div>
-        <div class="col-md-3 col-sm-3"><p>Cucumber <br>Cucumbers are green and yummy</p></div>
-    </div>
-    </div>
-
+<h1>Menu</h1>
+<section class="column-lg-4 column-md-6 column-sm-12">
+<div>
+<p class="sub1">Carrots</p>
+<p class="content"> "Carrots are orange and yummy"
+</p>
+</div>
+</section>
+<section class="column-lg-4 column-md-6 column-sm-12">
+<div>
+<p class="sub2">Cabbage</p>
+<p class="content"> "Cabbage is stinky but yummy"
+</p>
+</div>
+</section>
+<section class="column-lg-4 column-md-6 column-sm-12">
+<div>
+<p class="sub3">Cucumber</p>
+<p class="content"> "Cucumber is green and yummy"
+</p>
+</div>
+</section>
 </body>
 </html>
